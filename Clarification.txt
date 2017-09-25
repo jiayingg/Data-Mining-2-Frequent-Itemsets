@@ -1,0 +1,27 @@
+In your Map-Reduce implementation of SON algorithm, please avoid using global variables to hold candidate list, total basket count and/or any other information you think is 'globally' used.
+
+Try to think it in Map-Reduce way that each mapper and reducer are working separately on different machines, so hold any information needed locally in mapper or reducer and pass from mapper to reducer only through key-value pairs .
+
+For any questions about this assignment, feel free to post them on the discussion board.
+
+————————————————————————————————————————————————
+
+Here are some hints about SON phase 2:
+
+1. The output from phase 1 (candidate list) is used as one input of phase 2 (sys.argv[2]) in the following command:
+python firstname_lastname_son-phase2.py chunks.json phase1output.json
+So, please use 'open(sys.argv[2])' in your phase 2 mapper function to read the candidate list.
+
+Some students asked about where this 'phase1output.json' came from since we require you only output your result to std out and do not save to files. Here are two ways:
+(1) Just use the sample file 'phase1output.json' we provided;
+(2) Redirect your output to your own 'phase1output.json' with the following command and then use it for phase 2:
+python firstname_lastname_son-phase1.py chunks.json > phase1output.json
+
+2. Remember to output from mapper the basket count in every key-value pair, (candidate, (candidate count, basket count)) or any equivalent format, this will be needed for later calculation in reducer. Please refer to the example professor talked about in class.
+
+
+One more thing to remind:
+
+Please use sys.argv[] to get input arguments instead of hard coding them in your script. In Assignment 1, some students wrote open("integers.json") or open("connections.json"), when we test with other input files, it will produce no result. For Assignment 1, since we didn't specify the execution command in advance, we will not deduct points due to this kind of hard coding, but from this assignment, please follow the format and order of input arguments strictly (you may find this in the <execute> part of each task).
+
+For example, script for SON phase 2 is executed as 'python firstname_lastname_son-phase2.py chunks.json phase1output.json', so write sys.argv[1] rather than "chunks.json", sys.argv[2] instead of "phase1output.json".

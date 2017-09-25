@@ -1,0 +1,17 @@
+python Jiaying_Gu_apriori.py baskets_1.json
+python Jiaying_Gu_apriori.py baskets_2.json
+python Jiaying_Gu_apriori.py baskets_3.json
+python Jiaying_Gu_apriori.py baskets_4.json
+python Jiaying_Gu_apriori.py baskets_5.json
+
+python Jiaying_Gu_son-phase1.py chunks_1.json
+python Jiaying_Gu_son-phase1.py chunks_2.json
+python Jiaying_Gu_son-phase1.py chunks_3.json
+python Jiaying_Gu_son-phase1.py chunks_4.json
+python Jiaying_Gu_son-phase1.py chunks_5.json
+
+python Jiaying_Gu_son-phase2.py chunks_1.json output_2_1_1.json
+python Jiaying_Gu_son-phase2.py chunks_2.json output_2_2_1.json
+python Jiaying_Gu_son-phase2.py chunks_3.json output_2_3_1.json
+python Jiaying_Gu_son-phase2.py chunks_4.json output_2_4_1.json
+python Jiaying_Gu_son-phase2.py chunks_5.json output_2_5_1.json
